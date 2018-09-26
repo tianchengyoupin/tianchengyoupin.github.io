@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=1">
+    <title>郑州业航电子商务有限公司</title>
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.easing.min.js"></script>
+    <script src="jquery.fullPage.min.js"></script>
+    <script>
+        $(function () {
+            if ($.browser.msie && $.browser.version < 10) {
+                $('body').addClass('ltie10');
+            }
+
+            $('#ewsd').fullpage({
+                verticalCentered: false,
+                anchors: ['about', 'solution', 'customer', 'culture', 'contact'],
+                navigation: true,
+                navigationTooltips: ['关于我们', '解决方案',  '企业文化', '联系我们'],
+                afterLoad: function (anchorLink, index) {
+                    $(".nava").removeClass("nav-active");
+                    $(".nava").eq(index - 1).addClass("nav-active");
+                },
+                afterRender: function () {
+                    $(".nava").eq(0).addClass("nav-active");
+                }
+            });
+
+            //高亮头部选中的导航
+            $(".nava").on('click', function (i) {
+                $(".nava").removeClass("nav-active");
+                $(this).addClass("nav-active");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+
+
+<div class="ewsd-hd">
+    <div class="inner">
+        <h1><a href="">首页</a></h1>
+        <ul class="nav" style="float: left;margin-left: 100px;">
+            <li><a href="#about" class="nava">关于我们</a></li>
+            <li><a href="#solution" class="nava">解决方案</a></li>
+            <li><a href="#culture" class="nava">企业文化</a></li>
+            <li><a href="#contact" class="nava">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="ewsd">
+
+    <div class="section section4">
+        <div class="bg"><img src="section4.jpg" alt=""></div>
+        <div class="bg41"></div>
+        <div class="bg42"></div>
+        <div class="bg43"></div>
+        <strong>[ 关于我们 ]</strong>
+        <h3>一家心态永远年轻的科技公司</h3>
+        <p class="p1">
+            公司主要从事企业信息化咨询、信息化建设、软件研发等业务。公司拥有在企业信息化领域有着多年工作经验的专业人员组成的研发+设计团队，在创意上紧紧贴合现代时尚，在设计上牢牢锁住目标用户群，给用户以最直观的印象和深刻体验。公司的经营理念是研发优秀的产品，提供优质的服务，致力于中国企业信息化建设，为您树立企业形象，建立自己的品牌。</p>
+    </div>
+
+    <div class="section section5">
+        <div class="bg"><img src="section5.jpg" alt=""></div>
+        <strong>[ 解决方案 ]</strong>
+        <h3>灵活机变，全面为你而生</h3>
+        <div class="bg51">
+            <h4>视频制作传播</h4>
+            <p>致力于打造既美观实用又能被牢记的视频，解决传统企业的品牌宣传成本过高的问题！</p>
+        </div>
+        <div class="bg52">
+            <h4>资源快速整合</h4>
+            <p>整合弱小的资源，汇集起来、组合营销，行程企业级信息管理系统平台。</p>
+        </div>
+        <div class="bg53">
+            <h4>消息个性化回复</h4>
+            <p>拥有可视化流程设计器消息个性化回复软件，普通企业可以快速上手消息回复。</p>
+        </div>
+        <div class="bg54">
+            <h4>会员个性化管理</h4>
+            <p>与企业级信息系统组织机构及用户完美整合，实现会员的个性化管理以及实时沟通。</p>
+        </div>
+       
+    </div>
+
+   
+
+    <div class="section section7">
+        <div class="bg"><img src="section7.jpg" alt=""></div>
+        <div class="bg71"></div>
+        <div class="bg72"></div>
+        <div class="bg73"></div>
+        <strong>[ 企业文化 ]</strong>
+        <h3>致力于中国企业信息化建设</h3>
+        <div class="txt7">
+            <p>公司愿景：成为企业信息化建设行业的领跑者</p>
+            <p>公司使命：为企业信息化品牌建设提供强力驱动</p>
+            <p>核心价值观：客户至上、追求卓越、专业专注、超越自我</p>
+        </div>
+        <div class="bg74"><img src="bg74.png" alt=""></div>
+    </div>
+
+    <div class="section section8">
+        <div class="bg"><img src="section8.jpg" alt=""></div>
+        <div class="bg81"></div>
+        <div class="bg82"></div>
+        <div class="bg83"></div>
+        <div class="bg84"></div>
+        <strong>[ 联系我们 ]</strong>
+        <h3>期待与您合作共赢，共创辉煌！</h3>
+        <p class="p8" style="line-height: 35px;">
+            电子邮箱：realmason@foxmail.com
+        </p>
+        <p class="copyright">
+            <a href="#about">关于我们</a>
+            <a href="#solution">解决方案</a>
+            <a href="#culture">企业文化</a>
+            <a href="#contact">联系我们</a>
+            <span>|</span>
+            <span>版权所有 © 2014-2018 <a href="http://www.miitbeian.gov.cn/" target="_blank">豫ICP备17009470号-4</a></span>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
